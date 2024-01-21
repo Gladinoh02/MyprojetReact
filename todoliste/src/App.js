@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+
 function App() {
+    const [isComplete, setIsComplete] = useState(false);
   return (
     <div className="App">
        <h1>My TodoList</h1>
@@ -20,8 +22,16 @@ function App() {
             </div>
          </div>
          <div className="btn-area">
-             <button>Todo</button>
-             <button>Completed</button>
+             <button 
+                className={"secondaryBtn ${isComplete===false && 'active'}"} 
+                onClick={()=>setIsComplete(false)}>
+                  Todo
+              </button>
+             <button className={"secondaryBtn ${isComplete===false && 'active'}"}
+              onClick={()=>setIsComplete(true)}>
+                Completed
+             </button>
+             
          </div>
          <div className="todo-list">
              <div className="todo-list-item">
