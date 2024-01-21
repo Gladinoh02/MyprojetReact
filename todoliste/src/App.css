@@ -70,6 +70,52 @@ h1 {
   width: fit-content;
   cursor: pointer;
 }
-.secondaryBtn .active {
+ .active {
   background-color: rgb(0, 230, 122);
 }
+ .todo-list{
+  display: flex;
+  flex-direction: column;
+ }
+ .btn-area{
+  margin-bottom: 15px;
+ }
+ .todo-list-item{
+  background-color: #414040;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 1px gray;
+ }
+
+ .todo-list-item h3 {
+   font-size: 25px;
+   color: rgb(0, 230, 122);
+   font-weight: bold;
+   margin: 0;
+ }
+ .todo-list-item p{
+  font-size: 14px;
+  color: rgb(161, 161, 161);
+  margin-top: 8px;
+ }
+ .icon {
+  font-size: 25px;
+  cursor: pointer;
+ }
+ .icon:hover{
+  color: red;
+ }
+ .check-icon{
+  font-size: 25px;
+  margin-left: 10px;
+  color: rgb(0, 230, 122);
+
+ }
+ .check-icon:hover{
+  color: rgb(4, 196, 106);
+ }

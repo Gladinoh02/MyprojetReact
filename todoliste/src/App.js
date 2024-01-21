@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
-
+import {AiOutlineDelete} from 'react-icons/ai';
+import { BsCheckLg } from "react-icons/bs";
 function App() {
     const [isComplete, setIsComplete] = useState(false);
   return (
@@ -23,7 +23,7 @@ function App() {
          </div>
          <div className="btn-area">
              <button 
-                className={"secondaryBtn ${isComplete===false && 'active'}"} 
+                className={'secondaryBtn ${isComplete === false && active}'}
                 onClick={()=>setIsComplete(false)}>
                   Todo
               </button>
@@ -35,9 +35,15 @@ function App() {
          </div>
          <div className="todo-list">
              <div className="todo-list-item">
-                <h3>Task 1</h3>
-                <p>Description</p>
-             </div>
+                <div>
+                   <h3>Task 1</h3>
+                   <p>Description</p>
+                </div>
+                <div>
+                  <AiOutlineDelete className='icon'/>
+                  <BsCheckLg className='check-icon'/>
+                </div>
+            </div>
          </div>
        </div>
     </div>
